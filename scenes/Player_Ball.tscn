@@ -13,3 +13,8 @@ mesh = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -0.999939, 0, 0.0110825, 0, 1, 0, -0.0110825, 0, -0.999939, 0, 0, 0 )
+light_energy = 5.0
+light_bake_mode = 2

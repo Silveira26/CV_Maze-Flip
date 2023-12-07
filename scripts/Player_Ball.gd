@@ -1,42 +1,45 @@
 extends KinematicBody
 
-
 var velocity = Vector3.ZERO
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 const SPEED = 5
-const ROTSPEED = 7
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass  # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
-	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
-		velocity.x = 0
+	var direction = Vector3.ZERO
+
+	# Adjusted movement directions
+	if Input.is_action_pressed("ui_left"):
+		direction += Vector3.RIGHT  # Adjusted for reversed inputs
 	elif Input.is_action_pressed("ui_right"):
-		velocity.x = -SPEED
-		$MeshInstance.rotate_z(deg2rad(ROTSPEED))
-	elif Input.is_action_pressed("ui_left"):
-		velocity.x = SPEED
-		$MeshInstance.rotate_z(deg2rad(-ROTSPEED))
-	else:
-		velocity.x = lerp(velocity.x,0,0.1)
-	
-	if Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_down"):
-		velocity.z = 0
-	elif Input.is_action_pressed("ui_down"):
-		velocity.z = -SPEED
-		$MeshInstance.rotate_x(deg2rad(-ROTSPEED))
+		direction += Vector3.LEFT   # Adjusted for reversed inputs
+
+	if Input.is_action_pressed("ui_down"):
+		direction += Vector3.FORWARD  # Adjusted for reversed inputs
 	elif Input.is_action_pressed("ui_up"):
-		velocity.z = SPEED
-		$MeshInstance.rotate_x(deg2rad(ROTSPEED))
+		direction += Vector3.BACK     # Adjusted for reversed inputs
+
+	# Normalize direction to avoid faster diagonal movement
+	direction = direction.normalized()
+
+	# Apply movement and rotation
+	if direction != Vector3.ZERO:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+
+		# Calculate target rotation
+		var target_rotation = atan2(direction.x, direction.z)
+		rotation.y = lerp_angle(rotation.y, target_rotation, 0.1)
 	else:
-		velocity.z = lerp(velocity.z,0,0.1)
-		
+		velocity.x = 0
+		velocity.z = 0
+
+	# Apply gravity
 	velocity.y -= gravity * delta
-	
-	move_and_slide(velocity)
+
+	# Perform the move
+	velocity = move_and_slide(velocity)

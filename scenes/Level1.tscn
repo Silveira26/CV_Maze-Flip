@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Player_Ball.tscn" type="PackedScene" id=3]
 
+[sub_resource type="Environment" id=1]
+
 [node name="Level1" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.997466, -0.0309496, 0.0640651, 0, 0.900433, 0.434995, -0.0711492, 0.433893, -0.898151, 0, 6.4209, -9.43727 )
+transform = Transform( -0.997466, -0.0309496, 0.0640651, 0.0649434, -0.0282586, 0.997489, -0.0290614, 0.999121, 0.030197, 0, 14.9655, 0.605538 )
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 
@@ -22,3 +24,6 @@ transform = Transform( 0.82763, -0.561275, 0, 0.478207, 0.705141, -0.52354, 0.29
 
 [node name="Player_Ball" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.89831, -3.96635 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
