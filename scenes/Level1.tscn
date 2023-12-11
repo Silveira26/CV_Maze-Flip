@@ -1,20 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 10, 2, 10 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 5, 1, 5 )
+[ext_resource path="res://scenes/Maze Top.tscn" type="PackedScene" id=1]
 
 [node name="Level1" type="Spatial"]
 
-[node name="Simple Floor" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="Simple Floor"]
-mesh = SubResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Simple Floor"]
-shape = SubResource( 2 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.910554, 0.413391, 0, -0.413391, 0.910554, 0, 7.52553, 14.5776 )
+[node name="Maze Top" parent="." instance=ExtResource( 1 )]
