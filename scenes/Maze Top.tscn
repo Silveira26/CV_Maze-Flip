@@ -1,27 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://resources/dungeon_assets.tres" type="MeshLibrary" id=1]
-[ext_resource path="res://scripts/KinematicBody.gd" type="Script" id=2]
-
-[sub_resource type="CapsuleMesh" id=1]
-
-[sub_resource type="CapsuleShape" id=2]
 
 [node name="Maze Top" type="Spatial"]
-
-[node name="KinematicBody" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5851, 3.77634, 28.2016 )
-script = ExtResource( 2 )
-
-[node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
-mesh = SubResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
-shape = SubResource( 2 )
-
-[node name="Camera" type="Camera" parent="KinematicBody"]
 
 [node name="Floor" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
