@@ -22816,5 +22816,16 @@ anims/Walking_C = SubResource( 90 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.14204, 0 )
 shape = SubResource( 91 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.999851, 0, -0.0172779, 0, 1, 0, 0.0172779, 0, -0.999851, -0.11536, 1.65376, -1.90313 )
+[node name="FirstPersonCam" type="Camera" parent="."]
+transform = Transform( -0.999851, 0, -0.0172779, 0, 1, 0, 0.0172779, 0, -0.999851, -0.11536, 1.65376, 0.767727 )
+current = true
+fov = 77.7848
+
+[node name="ThirdPersonCam" type="Camera" parent="."]
+transform = Transform( -0.999914, -1.16405e-10, 0.0130897, 0.00280479, 0.976773, 0.214257, -0.0127856, 0.214275, -0.97669, 0, 3.44214, -3.06176 )
+projection = 1
+size = 4.0
+
+[node name="TopViewCam" type="Camera" parent="."]
+transform = Transform( -1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 7.6046, 0.0981383 )
+size = 9.0

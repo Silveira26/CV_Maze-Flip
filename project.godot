@@ -17,7 +17,11 @@ config/icon="res://icon.png"
 [autoload]
 
 CameraTransition="*res://autoload/camera_transition.tscn"
-Global="*res://scripts/Global.gd"
+MultiPlayer="*res://autoload/multiplayer.gd"
+
+[display]
+
+window/size/fullscreen=true
 
 [gui]
 

@@ -25,24 +25,22 @@ func _ready():
 	animation_player = get_node("AnimationPlayer")
 
 # Override '_input' to handle mouse motion events and ESC key.
-func _input(event):
-	if event is InputEventKey and event.pressed and event.scancode == KEY_Q:
-		Global.switch_player()
-	
-	if event is InputEventMouseMotion and Global.active_player == "Mage":
+func _input(event):	
+	if event is InputEventMouseMotion and MultiPlayer.active_player == "Mage":
 		# Mouse movement for camera rotation.
 		var mouse_movement = event.relative * mouse_sensitivity
 		rotate_y(deg2rad(-mouse_movement.x))
-		if $Camera != null:
-			$Camera.rotate_x(deg2rad(mouse_movement.y))
-			$Camera.rotation.x = clamp($Camera.rotation.x, deg2rad(-90), deg2rad(90))
+		var camera = get_viewport().get_camera()
+		if camera  != null:
+			camera.rotate_x(deg2rad(mouse_movement.y))
+			camera.rotation.x = clamp(camera.rotation.x, deg2rad(-90), deg2rad(90))
 
 	# Close the game if ESC is pressed.
 	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
 		get_tree().quit()
 
 func _physics_process(delta: float):
-	if Global.active_player != "Mage":
+	if MultiPlayer.active_player != "Mage":
 		return
 	on_ground = is_on_floor()
 	var direction = get_input_direction()

@@ -30,7 +30,7 @@ __meta__ = {
 "_editor_clip_": 0
 }
 
-[node name="Mage" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.0223783, 0, -0.699642, 0, 0.7, 0, 0.699642, 0, -0.0223783, -35.6493, 1.42686, 27.4499 )
 
 [node name="Torches" type="Spatial" parent="."]
@@ -38,5 +38,77 @@ transform = Transform( -0.0223783, 0, -0.699642, 0, 0.7, 0, 0.699642, 0, -0.0223
 [node name="Torch" parent="Torches" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.561, -1.52141, 31.9389 )
 
+[node name="Torch7" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, -16.1998, -1.52141, 28.1626 )
+
+[node name="Torch8" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, -16.1998, -1.52141, 24.3017 )
+
+[node name="Torch9" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, 39.8656, -1.68219, 20.2934 )
+
+[node name="Torch26" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.999588, 0, -0.0287067, 0, 1, 0, 0.0287067, 0, -0.999588, 12.6892, -1.68219, 8.74411 )
+
+[node name="Torch23" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, 40.4576, -1.68219, 6.32213 )
+
+[node name="Torch24" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.998208, 0, 0.0598464, 0, 1, 0, -0.0598464, 0, -0.998208, 58.2902, -1.68219, -16.1915 )
+
+[node name="Torch25" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0146602, 0, -0.999893, 0, 1, 0, 0.999893, 0, -0.0146602, 72.1803, -1.68219, -22.2001 )
+
+[node name="Torch10" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, 39.8656, -1.68219, 16.323 )
+
+[node name="Torch12" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.999974, 0, 0.00722569, 0, 1, 0, -0.00722569, 0, 0.999974, 11.6734, -1.20877, -8.32432 )
+
+[node name="Torch14" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.999546, 0, 0.0301372, 0, 1, 0, -0.0301372, 0, -0.999546, -5.636, -2.336, -7.89725 )
+
+[node name="Torch15" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.0451539, 0, -0.99898, 0, 1, 0, 0.99898, 0, 0.0451539, -23.7218, -1.75423, -4.20745 )
+
+[node name="Torch16" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.0451539, 0, -0.99898, 0, 1, 0, 0.99898, 0, 0.0451539, -23.7218, -1.75423, -0.493485 )
+
+[node name="Torch17" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0648635, 0, 0.997894, 0, 1, 0, -0.997894, 0, -0.0648635, -8.39885, -1.75423, -23.5585 )
+
+[node name="Torch18" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0648635, 0, 0.997894, 0, 1, 0, -0.997894, 0, -0.0648635, -8.39885, -1.75423, -27.7375 )
+
+[node name="Torch19" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.0263861, 0, 0.999652, 0, 1, 0, -0.999652, 0, 0.0263861, 0.040864, -2.00755, -39.9781 )
+
+[node name="Torch20" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.0263861, 0, 0.999652, 0, 1, 0, -0.999652, 0, 0.0263861, 0.040864, -2.00755, -35.6032 )
+
+[node name="Torch21" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.999998, 0, 0.00214701, 0, 1, 0, -0.00214701, 0, 0.999998, -6.20973, -2.00755, -32.1791 )
+
+[node name="Torch22" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.99999, 0, -0.00452064, 0, 1, 0, 0.00452064, 0, -0.99999, -9.67134, -2.00755, -39.9288 )
+
+[node name="Torch13" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.999974, 0, 0.00722569, 0, 1, 0, -0.00722569, 0, 0.999974, 15.5899, -1.20877, -8.32432 )
+
+[node name="Torch11" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.0131071, 0, 0.999914, 0, 1, 0, -0.999914, 0, -0.0131071, 71.8687, -1.01365, 30.2687 )
+
 [node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -39.6587, -1.52141, 24.0388 )
+
+[node name="Torch3" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45.994, -1.52141, 24.142 )
+
+[node name="Torch4" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 0.996378, 0, 0.0850346, 0, 1, 0, -0.0850346, 0, 0.996378, -74.4725, -1.52141, 39.7778 )
+
+[node name="Torch5" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538, -57.9393, -1.52141, -15.7477 )
+
+[node name="Torch6" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538, -65.6661, -0.207901, -32.9784 )

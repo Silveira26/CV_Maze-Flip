@@ -1,8 +1,11 @@
 extends Spatial
 
 # Camera references
-onready var cameras_top = [$MazeTop/Camera1, $MazeTop/Camera2, $MazeTop/Camera3]
-onready var cameras_bottom = [$MazeBottom/Camera1, $MazeBottom/Camera2, $MazeBottom/Camera3]
+onready var cameras_top = [$MazeTop/Player/FirstPersonCam, $MazeTop/Player/ThirdPersonCam, $MazeTop/Player/TopViewCam]
+onready var cameras_bottom = [$MazeBottom/Player/FirstPersonCam, $MazeBottom/Player/ThirdPersonCam, $MazeBottom/Player/TopViewCam]
+
+# Sensitivity of the mouse movement.
+var mouse_sensitivity: float = 0.05
 
 var current_maze = "top"
 var current_camera_index = 0
@@ -18,7 +21,6 @@ func _process(delta: float) -> void:
 		swap_maze()
 	elif Input.is_action_just_pressed("toggle_projection"):
 		toggle_camera_projection()
-
 
 func swap_cameras() -> void:
 	# Determine the next camera index
@@ -41,6 +43,8 @@ func swap_maze() -> void:
 
 	# Use CameraTransition for a smooth transition
 	CameraTransition.transition_camera3D(get_current_camera_array()[current_camera_index], next_camera, 1.5)
+	
+	MultiPlayer.switch_player()
 
 	# Update the maze and reset the camera index
 	current_maze = next_maze

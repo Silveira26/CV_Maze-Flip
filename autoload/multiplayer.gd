@@ -1,4 +1,4 @@
-# Global.gd
+# multiplayer.gb
 extends Node
 
 var active_player = "Mage"
