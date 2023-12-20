@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://resources/spacebit_assets_new.tres" type="MeshLibrary" id=1]
-[ext_resource path="res://assets/characthers/Mage.glb" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Barbarian.tscn" type="PackedScene" id=2]
 
 [node name="Maze Bottom" type="Spatial"]
 
@@ -29,5 +29,5 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="Mage" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6931, 3.97039, -12.9677 )
+[node name="Barbarian" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0776, 3.68678, -12.6006 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://resources/dungeon_assets.tres" type="MeshLibrary" id=1]
-[ext_resource path="res://assets/characthers/Barbarian.glb" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Mage.tscn" type="PackedScene" id=2]
 
 [node name="Maze Top" type="Spatial"]
 
@@ -29,5 +29,5 @@ __meta__ = {
 "_editor_clip_": 0
 }
 
-[node name="Barbarian" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2, 27 )
+[node name="Mage" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.0223783, 0, -0.699642, 0, 0.7, 0, 0.699642, 0, -0.0223783, -35.6493, 1.42686, 27.4499 )

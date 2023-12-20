@@ -22439,9 +22439,8 @@ tracks/40/imported = false
 tracks/40/enabled = true
 tracks/40/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1.6, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
 
-[sub_resource type="CapsuleShape" id=91]
-radius = 1.02828
-height = 1.37743
+[sub_resource type="BoxShape" id=91]
+extents = Vector3( 0.619305, 0.829472, 1.06299 )
 
 [node name="Barbarian" type="KinematicBody"]
 script = ExtResource( 2 )
@@ -22819,4 +22818,3 @@ shape = SubResource( 91 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.999851, 0, -0.0172779, 0, 1, 0, 0.0172779, 0, -0.999851, -0.11536, 1.65376, -1.90313 )
-current = true

@@ -27,9 +27,7 @@ func _ready():
 # Override '_input' to handle mouse motion events and ESC key.
 func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_Q:
-		print(Global.active_player)
 		Global.switch_player()
-		print(Global.active_player)
 	
 	if event is InputEventMouseMotion and Global.active_player == "Mage":
 		# Mouse movement for camera rotation.
@@ -53,7 +51,7 @@ func _physics_process(delta: float):
 	velocity.z = direction.z * speed
 
 	# Apply gravity.
-	velocity.y -= gravity * delta
+	velocity.y += gravity * delta
 
 	# Jump mechanic.
 	if on_ground and Input.is_action_just_pressed("ui_accept"):

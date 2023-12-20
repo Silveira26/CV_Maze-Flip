@@ -27,9 +27,8 @@ func _ready():
 # Override '_input' to handle mouse motion events and ESC key.
 func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_Q:
-		print(Global.active_player)
 		Global.switch_player()
-		print(Global.active_player)
+
 	if event is InputEventMouseMotion and Global.active_player == "Barbarian":
 		# Mouse movement for camera rotation.
 		var mouse_movement = event.relative * mouse_sensitivity

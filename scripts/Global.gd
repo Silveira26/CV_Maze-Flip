@@ -1,7 +1,7 @@
 # Global.gd
 extends Node
 
-var active_player = "Barbarian"
+var active_player = "Mage"
 
 func switch_player():
-	active_player = "Mage" if active_player == "Barbarian" else "Barbarian"
+	active_player = "Barbarian" if active_player == "Mage" else "Mage"
