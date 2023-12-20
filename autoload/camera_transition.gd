@@ -2,6 +2,7 @@ extends Node
 
 onready var camera2D: Camera2D = $Camera2D
 onready var camera3D: Camera = $Camera
+onready var cameraTop: Camera = $CameraTop
 onready var tween: Tween = $Tween
 
 var transitioning: bool = false
@@ -60,7 +61,7 @@ func transition_camera3D(from: Camera, to: Camera, duration: float = 1.0) -> voi
 	camera3D.current = true
 	
 	transitioning = true
-	
+		
 	# Move to the second camera, while also adjusting the parameters to
 	# match the second camera
 	tween.remove_all()
