@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Maze Flip"
-run/main_scene="res://scenes/Level1.tscn"
+run/main_scene="res://scenes/Maze Bottom.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
 
 [gui]
 
