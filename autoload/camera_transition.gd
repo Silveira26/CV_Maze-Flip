@@ -2,7 +2,6 @@ extends Node
 
 onready var camera2D: Camera2D = $Camera2D
 onready var camera3D: Camera = $Camera
-onready var cameraTop: Camera = $CameraTop
 onready var tween: Tween = $Tween
 
 var transitioning: bool = false
