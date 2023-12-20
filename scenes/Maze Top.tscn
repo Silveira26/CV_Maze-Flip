@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/dungeon_assets.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/Mage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/torch.tscn" type="PackedScene" id=3]
 
-[node name="Maze Top" type="Spatial"]
+[node name="MazeTop" type="Spatial"]
 
 [node name="Floor" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
@@ -31,3 +32,11 @@ __meta__ = {
 
 [node name="Mage" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.0223783, 0, -0.699642, 0, 0.7, 0, 0.699642, 0, -0.0223783, -35.6493, 1.42686, 27.4499 )
+
+[node name="Torches" type="Spatial" parent="."]
+
+[node name="Torch" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.561, -1.52141, 31.9389 )
+
+[node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -39.6587, -1.52141, 24.0388 )

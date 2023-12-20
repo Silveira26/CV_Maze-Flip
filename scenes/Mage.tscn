@@ -22641,7 +22641,7 @@ bones/40/enabled = true
 bones/40/bound_children = [  ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( -0.999999, -4.68406e-07, -4.57311e-07, -4.64136e-07, -5.60722e-07, 1, -4.68406e-07, 0.999999, 5.63845e-07, 0.883132, 1.04926, -7.05996e-07 )
+transform = Transform( 2.02063e-06, 0.262862, 0.964832, 1, 1.19209e-07, -1.00873e-06, -5.31052e-07, 0.964832, -0.262862, 0.507767, 0.636705, -0.01852 )
 bone_name = "handslot.l"
 
 [node name="Spellbook" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment"]
@@ -22649,7 +22649,7 @@ transform = Transform( -1, 1.21636e-08, -2.65413e-07, -2.65413e-07, 0, 1, 1.2163
 mesh = SubResource( 1 )
 
 [node name="BoneAttachment2" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( -0.999999, -4.68406e-07, -4.57311e-07, -4.64136e-07, -5.60722e-07, 1, -4.68406e-07, 0.999999, 5.63845e-07, 0.883132, 1.04926, -7.05996e-07 )
+transform = Transform( 2.02063e-06, 0.262862, 0.964832, 1, 1.19209e-07, -1.00873e-06, -5.31052e-07, 0.964832, -0.262862, 0.507767, 0.636705, -0.01852 )
 bone_name = "handslot.l"
 
 [node name="Spellbook_open" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment2"]
@@ -22657,31 +22657,55 @@ transform = Transform( -1, 1.21636e-08, -2.65413e-07, -2.65413e-07, 0, 1, 1.2163
 mesh = SubResource( 2 )
 
 [node name="BoneAttachment3" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( -0.999999, 4.68406e-07, 5.16915e-07, 4.53893e-07, -6.51675e-07, 1, 3.67823e-07, 0.999999, 5.35883e-07, -0.883132, 1.04926, -7.68981e-07 )
+transform = Transform( 8.12095e-07, -0.149894, -0.988701, -1, 1.01328e-06, -3.53075e-07, 8.17534e-07, 0.988701, -0.149894, -0.49106, 0.64103, 0.106596 )
 bone_name = "handslot.r"
 
 [node name="1H_Wand" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment3"]
 transform = Transform( -1, 2.65413e-07, -4.55302e-09, 2.65413e-07, 1, -8.74227e-08, 4.553e-09, -8.74227e-08, -1, 5.96046e-08, 3.81932e-07, -1.2323e-07 )
 mesh = SubResource( 3 )
 
-[node name="OmniLight" type="OmniLight" parent="Rig/Skeleton/BoneAttachment3/1H_Wand"]
-transform = Transform( 1, 5.96046e-08, 9.31032e-08, 0, 1, -4.76692e-07, 0, -8.73115e-11, 1, -0.0672442, 1.04641, -0.00507575 )
-light_color = Color( 0.380392, 0.627451, 0.360784, 1 )
-light_energy = 2.0
-light_indirect_energy = 2.0
-shadow_enabled = true
-omni_range = 3.36082
-
 [node name="BoneAttachment4" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( -0.999999, 4.68406e-07, 5.16915e-07, 4.53893e-07, -6.51675e-07, 1, 3.67823e-07, 0.999999, 5.35883e-07, -0.883132, 1.04926, -7.68981e-07 )
+transform = Transform( 8.12095e-07, -0.149894, -0.988701, -1, 1.01328e-06, -3.53075e-07, 8.17534e-07, 0.988701, -0.149894, -0.49106, 0.64103, 0.106596 )
 bone_name = "handslot.r"
 
 [node name="2H_Staff" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment4"]
 transform = Transform( -1, 2.65413e-07, -4.55302e-09, 2.65413e-07, 1, -8.74227e-08, 4.553e-09, -8.74227e-08, -1, 5.96046e-08, 3.81932e-07, -1.2323e-07 )
 mesh = SubResource( 4 )
 
+[node name="OmniLight" type="OmniLight" parent="Rig/Skeleton/BoneAttachment4/2H_Staff"]
+transform = Transform( 1, -3.2671e-07, 5.72388e-07, -3.41061e-13, 1, 5.36442e-07, 7.81597e-13, -2.08616e-07, 1, -0.010027, 1.36311, 0.0283862 )
+light_color = Color( 0.380392, 0.627451, 0.360784, 1 )
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 4.5
+omni_attenuation = 2.14355
+
+[node name="OmniLight4" type="OmniLight" parent="Rig/Skeleton/BoneAttachment4/2H_Staff"]
+transform = Transform( 1, -3.2671e-07, 5.72388e-07, -6.82121e-13, 1, 6.4075e-07, 8.45546e-13, -2.98023e-07, 1, -0.355393, 1.00716, -0.0255791 )
+light_color = Color( 0.380392, 0.627451, 0.360784, 1 )
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 4.5
+omni_attenuation = 2.14355
+
+[node name="OmniLight2" type="OmniLight" parent="Rig/Skeleton/BoneAttachment4/2H_Staff"]
+transform = Transform( 1, -3.2671e-07, 5.72388e-07, -7.95808e-13, 1, 6.70552e-07, 8.81073e-13, -3.27826e-07, 1, -0.00728905, 1.00838, 0.207007 )
+light_color = Color( 0.380392, 0.627451, 0.360784, 1 )
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 4.5
+omni_attenuation = 2.14355
+
+[node name="OmniLight3" type="OmniLight" parent="Rig/Skeleton/BoneAttachment4/2H_Staff"]
+transform = Transform( 1, -3.2671e-07, 5.72387e-07, -9.09495e-13, 1, 7.00355e-07, 8.66862e-13, -3.57628e-07, 1, -0.00728893, 1.07884, -0.257775 )
+light_color = Color( 0.380392, 0.627451, 0.360784, 1 )
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 4.5
+omni_attenuation = 2.14355
+
 [node name="BoneAttachment5" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( 1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 1.24143, 0 )
+transform = Transform( 0.99972, -1.40145e-09, 0.0236468, 1.39343e-09, 1, 3.55686e-10, -0.0236468, -3.22636e-10, 0.99972, -4.30386e-09, 1.22783, 2.40759e-15 )
 bone_name = "head"
 
 [node name="Mage_Hat" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment5"]
@@ -22689,7 +22713,7 @@ transform = Transform( 1, 3.67804e-15, -1.37266e-14, 2.11758e-22, 0.965926, 0.25
 mesh = SubResource( 5 )
 
 [node name="BoneAttachment6" type="BoneAttachment" parent="Rig/Skeleton"]
-transform = Transform( 1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0.972629, 0 )
+transform = Transform( 0.996275, -5.14962e-09, 0.0862354, 5.13044e-09, 1, 4.44077e-10, -0.0862354, 2.76173e-15, 0.996275, -2.91966e-09, 0.959029, 1.57697e-15 )
 bone_name = "chest"
 
 [node name="Mage_Cape" type="MeshInstance" parent="Rig/Skeleton/BoneAttachment6"]
