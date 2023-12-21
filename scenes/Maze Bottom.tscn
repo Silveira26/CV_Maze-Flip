@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/spacebit_assets_new.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/Barbarian.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Axe.tscn" type="PackedScene" id=3]
 
 [node name="MazeBottom" type="Spatial"]
 
@@ -31,3 +32,8 @@ __meta__ = {
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0776, 3.68678, -12.6006 )
+
+[node name="Axe" type="Spatial" parent="."]
+
+[node name="Axe" parent="Axe" instance=ExtResource( 3 )]
+transform = Transform( -0.596141, -0.80288, 0, 0.80288, -0.596141, 0, 0, 0, 1, 27.218, 3.52355, -2.73533 )

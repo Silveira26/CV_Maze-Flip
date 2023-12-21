@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resources/dungeon_assets.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/Mage.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Barrel.tscn" type="PackedScene" id=4]
 
 [node name="MazeTop" type="Spatial"]
 
@@ -112,3 +113,25 @@ transform = Transform( -0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538,
 
 [node name="Torch6" parent="Torches" instance=ExtResource( 3 )]
 transform = Transform( -0.994538, 0, -0.104372, 0, 1, 0, 0.104372, 0, -0.994538, -65.6661, -0.207901, -32.9784 )
+
+[node name="Barrels" type="Spatial" parent="."]
+
+[node name="Barrel" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2164, 0, -22.6569 )
+
+[node name="Barrel2" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.58049, 0, -1.71578 )
+
+[node name="Barrel3" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3019, 0, -1.96158 )
+
+[node name="Barrel4" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6459, 0, 22.4866 )
+
+[node name="Barrel5" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54639, 0, 1.33307 )
+
+[node name="Barrel6" parent="Barrels" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.37037, 0, 1.69042 )
+
+[node name="Axes" type="Spatial" parent="."]
