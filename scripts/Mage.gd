@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 
 # Speed of the player movement.
 var speed: float = 10.0
@@ -8,8 +8,6 @@ var jump_power: float = 5.0
 var mouse_sensitivity: float = 0.05
 # Gravity value.
 var gravity: float = -9.8
-# Velocity of the player.
-var velocity: Vector3 = Vector3.ZERO
 # To keep track of whether the player is on the ground.
 var on_ground: bool = true
 # Reference to the AnimationPlayer node.
@@ -29,14 +27,14 @@ func _input(event):
 	if event is InputEventMouseMotion and MultiPlayer.active_player == "Mage":
 		# Mouse movement for camera rotation.
 		var mouse_movement = event.relative * mouse_sensitivity
-		rotate_y(deg2rad(-mouse_movement.x))
-		var camera = get_viewport().get_camera()
+		rotate_y(deg_to_rad(-mouse_movement.x))
+		var camera = get_viewport().get_camera_3d()
 		if camera  != null:
-			camera.rotate_x(deg2rad(mouse_movement.y))
-			camera.rotation.x = clamp(camera.rotation.x, deg2rad(-90), deg2rad(90))
+			camera.rotate_x(deg_to_rad(mouse_movement.y))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 	# Close the game if ESC is pressed.
-	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		get_tree().quit()
 
 func _physics_process(delta: float):
@@ -57,7 +55,11 @@ func _physics_process(delta: float):
 		set_animation("Jump_Start")
 
 	# Move the player.
-	velocity = move_and_slide(velocity, Vector3.UP, true)
+	set_velocity(velocity)
+	set_up_direction(Vector3.UP)
+	set_floor_stop_on_slope_enabled(true)
+	move_and_slide()
+	velocity = velocity
 
 	# Determine the correct animation.
 	var animation_name = "Idle"

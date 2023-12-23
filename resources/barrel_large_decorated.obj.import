@@ -1,20 +1,22 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh"
+uid="uid://vke4ed74o3pf"
+path="res://.godot/imported/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh"
 
 [deps]
 
-files=[ "res://.import/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh" ]
+files=["res://.godot/imported/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh"]
 
 source_file="res://resources/barrel_large_decorated.obj"
-dest_files=[ "res://.import/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh", "res://.import/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh" ]
+dest_files=["res://.godot/imported/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh", "res://.godot/imported/barrel_large_decorated.obj-5267f06540d7c999e9e5f03b76a67f81.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
