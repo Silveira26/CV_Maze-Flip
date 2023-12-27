@@ -2,15 +2,8 @@ extends Node
 
 @onready var camera2D: Camera2D = $Camera2D
 @onready var camera3D: Camera3D = $Camera3D
-var tween
 
 var transitioning: bool = false
-
-func _ready() -> void:
-	tween = get_tree().create_tween()
-	camera2D.enabled = false
-	camera3D.clear_current()
-
 
 func switch_camera(from, to) -> void:
 	from.current = false
@@ -33,7 +26,7 @@ func transition_camera2D(from: Camera2D, to: Camera2D, duration: float = 1.0) ->
 	
 	# Move to the second camera, while also adjusting the parameters to
 	# match the second camera
-	tween.stop()
+	var tween = get_tree().create_tween()
 	tween.tween_property(camera2D, "global_transform", to.global_transform, duration)
 	tween.tween_property(camera2D, "zoom", to.zoom, duration)
 	tween.tween_property(camera2D, "offset", to.offset, duration)
@@ -43,7 +36,7 @@ func transition_camera2D(from: Camera2D, to: Camera2D, duration: float = 1.0) ->
 	await tween.finished
 	
 	# Make the second camera current
-	to.enabled = true
+	to.make_current()
 	transitioning = false
 
 func transition_camera3D(from: Camera3D, to: Camera3D, duration: float = 1.0) -> void:
@@ -62,7 +55,7 @@ func transition_camera3D(from: Camera3D, to: Camera3D, duration: float = 1.0) ->
 		
 	# Move to the second camera, while also adjusting the parameters to
 	# match the second camera
-	tween.stop()
+	var tween = get_tree().create_tween()
 	tween.tween_property(camera3D, "global_transform", to.global_transform, duration)
 	tween.tween_property(camera3D, "fov", to.fov, duration)
 	tween.play()

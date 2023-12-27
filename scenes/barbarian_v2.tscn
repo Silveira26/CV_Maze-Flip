@@ -1,7 +1,7 @@
 [gd_scene load_steps=81 format=3 uid="uid://dkot3rdyhl3mt"]
 
 [ext_resource type="PackedScene" uid="uid://blkvmagai531b" path="res://assets/characthers/Barbarian.glb" id="1_g3h4r"]
-[ext_resource type="Script" path="res://scenes/barbarian_v2.gd" id="2_pylg0"]
+[ext_resource type="Script" path="res://scripts/barbarian_v2.gd" id="2_n3ep6"]
 
 [sub_resource type="Animation" id="Animation_nypd3"]
 resource_name = "1H_Melee_Attack_Chop"
@@ -30715,7 +30715,7 @@ radius = 0.798608
 height = 2.85801
 
 [node name="Barbarian" instance=ExtResource("1_g3h4r")]
-script = ExtResource("2_pylg0")
+script = ExtResource("2_n3ep6")
 
 [node name="Skeleton3D" parent="Rig" index="0"]
 bones/1/position = Vector3(4.35612e-18, 0.360311, 1.03858e-24)
@@ -30760,25 +30760,25 @@ bones/47/position = Vector3(-0.513182, 0.942072, 0.219093)
 bones/47/rotation = Quaternion(-0.551742, 0.442245, 0.551742, -0.442245)
 
 [node name="1H_Axe_Offhand" parent="Rig/Skeleton3D" index="0"]
-transform = Transform3D(9.21887e-07, 5.66244e-07, 0.999999, 0.959981, 0.280063, -6.31086e-07, -0.280063, 0.959981, -3.93314e-07, 0.515551, 0.739105, -0.108337)
+transform = Transform3D(2.26299e-06, -3.35277e-07, 0.999999, 0.959981, 0.280064, -1.61456e-06, -0.280064, 0.959981, 8.15543e-07, 0.515551, 0.739104, -0.108336)
 
 [node name="Barbarian_Round_Shield" parent="Rig/Skeleton3D" index="1"]
-transform = Transform3D(1.6008e-08, 3.59611e-07, 0.999999, 0.959981, 0.280061, 2.96413e-07, -0.280061, 0.959982, -4.48655e-07, 0.671436, 0.73454, -0.123982)
+transform = Transform3D(1.35711e-06, -5.41913e-07, 0.999999, 0.959981, 0.280062, -6.87063e-07, -0.280062, 0.959981, 7.60202e-07, 0.671436, 0.73454, -0.123981)
 
 [node name="1H_Axe" parent="Rig/Skeleton3D" index="2"]
-transform = Transform3D(-2.89357e-07, 5.76204e-08, 1, 0.217679, 0.97602, 9.91837e-09, -0.976019, 0.217679, 2.92071e-08, -0.490235, 0.944689, 0.384806)
+transform = Transform3D(2.07993e-06, -4.78822e-07, 0.999999, 0.217679, 0.97602, -1.09291e-07, -0.97602, 0.217679, 2.48976e-06, -0.490236, 0.944688, 0.384806)
 
 [node name="2H_Axe" parent="Rig/Skeleton3D" index="3"]
-transform = Transform3D(-2.89357e-07, 5.76204e-08, 1, 0.217679, 0.97602, 9.91837e-09, -0.976019, 0.217679, 2.92071e-08, -0.490235, 0.944689, 0.384806)
+transform = Transform3D(2.07993e-06, -4.78822e-07, 0.999999, 0.217679, 0.97602, -1.09291e-07, -0.97602, 0.217679, 2.48976e-06, -0.490236, 0.944688, 0.384806)
 
 [node name="Mug" parent="Rig/Skeleton3D" index="4"]
-transform = Transform3D(-2.89357e-07, 5.76204e-08, 1, 0.217679, 0.97602, 9.91837e-09, -0.976019, 0.217679, 2.92071e-08, -0.490235, 0.83149, 0.66751)
+transform = Transform3D(2.07993e-06, -4.78822e-07, 0.999999, 0.217679, 0.97602, -1.09291e-07, -0.97602, 0.217679, 2.48976e-06, -0.490237, 0.831489, 0.66751)
 
 [node name="Barbarian_Hat" parent="Rig/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.45058e-09, 1.98028e-11, -1.62829e-17, 1, -4.53628e-10, -1.98046e-11, 4.53629e-10, 1, 0.0326824, 1.16909, -1.3918e-07)
+transform = Transform3D(1, 7.45058e-09, 1.98153e-11, -1.62829e-17, 1, -4.53629e-10, -1.9817e-11, 4.53629e-10, 1, 0.0326824, 1.16909, -1.3918e-07)
 
 [node name="Barbarian_Cape" parent="Rig/Skeleton3D" index="6"]
-transform = Transform3D(1, 7.45058e-09, 1.98028e-11, -1.62844e-17, 1, -4.53628e-10, -1.98046e-11, 4.53629e-10, 1, 0.0326805, 1.16909, -1.3918e-07)
+transform = Transform3D(1, 7.45058e-09, 1.98153e-11, -1.62844e-17, 1, -4.53629e-10, -1.9817e-11, 4.53629e-10, 1, 0.0326805, 1.16909, -1.3918e-07)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

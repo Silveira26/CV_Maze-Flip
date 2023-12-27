@@ -1,7 +1,7 @@
 [gd_scene load_steps=81 format=3 uid="uid://1uxus35imr2y"]
 
 [ext_resource type="PackedScene" uid="uid://dnuy2hm2e38ad" path="res://assets/characthers/Mage.glb" id="1_na5jy"]
-[ext_resource type="Script" path="res://scenes/mage_v2.gd" id="2_hb3yc"]
+[ext_resource type="Script" path="res://scripts/mage_v2.gd" id="2_0rjd1"]
 
 [sub_resource type="Animation" id="Animation_gev3y"]
 resource_name = "1H_Melee_Attack_Chop"
@@ -30715,7 +30715,7 @@ radius = 0.727081
 height = 3.14332
 
 [node name="Mage" instance=ExtResource("1_na5jy")]
-script = ExtResource("2_hb3yc")
+script = ExtResource("2_0rjd1")
 
 [node name="Skeleton3D" parent="Rig" index="0"]
 bones/1/position = Vector3(4.35612e-18, 0.360311, 1.03858e-24)
@@ -30760,16 +30760,16 @@ bones/46/position = Vector3(-0.513182, 0.942072, 0.219093)
 bones/46/rotation = Quaternion(-0.551742, 0.442245, 0.551742, -0.442245)
 
 [node name="Spellbook" parent="Rig/Skeleton3D" index="0"]
-transform = Transform3D(-3.40911e-07, 0.999999, 5.66244e-07, -0.959981, -7.33593e-08, 0.280063, 0.280063, -5.56025e-07, 0.959981, 0.515551, 0.8042, 0.114792)
+transform = Transform3D(-1.68202e-06, 0.999999, -3.35277e-07, -0.959981, -1.05684e-06, 0.280064, 0.280064, 6.52832e-07, 0.959981, 0.515551, 0.804199, 0.114793)
 
 [node name="Spellbook_open" parent="Rig/Skeleton3D" index="1"]
-transform = Transform3D(-3.40911e-07, 0.999999, 5.66244e-07, -0.959981, -7.33593e-08, 0.280063, 0.280063, -5.56025e-07, 0.959981, 0.515551, 0.770494, -0.000742853)
+transform = Transform3D(-1.68202e-06, 0.999999, -3.35277e-07, -0.959981, -1.05684e-06, 0.280064, 0.280064, 6.52832e-07, 0.959981, 0.515551, 0.770493, -0.000742257)
 
 [node name="1H_Wand" parent="Rig/Skeleton3D" index="2"]
-transform = Transform3D(-2.75671e-07, -6.15889e-08, 1, 0.217679, 0.97602, 1.2329e-07, -0.976019, 0.217679, 6.85143e-08, -0.490235, 0.912179, 0.377556)
+transform = Transform3D(2.09361e-06, -5.98031e-07, 0.999999, 0.217679, 0.97602, 4.08061e-09, -0.97602, 0.217679, 2.52907e-06, -0.490236, 0.912178, 0.377555)
 
 [node name="2H_Staff" parent="Rig/Skeleton3D" index="3"]
-transform = Transform3D(-2.75671e-07, -6.15889e-08, 1, 0.217679, 0.97602, 1.2329e-07, -0.976019, 0.217679, 6.85143e-08, -0.490235, 0.912179, 0.377556)
+transform = Transform3D(2.09361e-06, -5.98031e-07, 0.999999, 0.217679, 0.97602, 4.08061e-09, -0.97602, 0.217679, 2.52907e-06, -0.490236, 0.912178, 0.377555)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Rig/Skeleton3D/2H_Staff/2H_Staff" index="0"]
 transform = Transform3D(1, -3.2671e-07, 5.72388e-07, -3.41061e-13, 1, 5.36442e-07, 7.81597e-13, -2.08616e-07, 1, -0.010027, 1.36311, 0.0283862)
@@ -30804,10 +30804,10 @@ omni_range = 4.5
 omni_attenuation = 2.14355
 
 [node name="Mage_Hat" parent="Rig/Skeleton3D" index="4"]
-transform = Transform3D(1, 7.19158e-09, 1.94748e-09, -1.62829e-17, 0.965926, 0.258819, -1.98046e-11, -0.258819, 0.965926, 0.0326824, 1.73732, -1.02156e-07)
+transform = Transform3D(1, 7.19158e-09, 1.94749e-09, -1.62829e-17, 0.965926, 0.258819, -1.9817e-11, -0.258819, 0.965926, 0.0326824, 1.73732, -1.02156e-07)
 
 [node name="Mage_Cape" parent="Rig/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.45058e-09, 1.98028e-11, -1.62831e-17, 1, -4.53628e-10, -1.98046e-11, 4.53629e-10, 1, 0.0326824, 1.16909, -1.02414e-07)
+transform = Transform3D(1, 7.45058e-09, 1.98153e-11, -1.62831e-17, 1, -4.53629e-10, -1.9817e-11, 4.53629e-10, 1, 0.0326824, 1.16909, -1.02414e-07)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
