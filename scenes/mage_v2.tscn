@@ -30830,4 +30830,5 @@ size = 0.1
 
 [node name="TopViewCam" type="Camera3D" parent="." index="5"]
 transform = Transform3D(-1, 8.74228e-08, -1.04251e-15, 0, 1.19249e-08, 1, 8.74228e-08, 1, -1.19249e-08, 0, 10.0119, 0.169789)
+current = true
 size = 12.0

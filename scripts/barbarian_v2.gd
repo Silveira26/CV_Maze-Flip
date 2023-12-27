@@ -9,7 +9,7 @@ var animation_player: AnimationPlayer
 var current_animation: String = ""
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = -ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,19 +44,20 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 				
 	# Apply inverted gravity.
-	velocity.y += gravity * delta  # Subtracting instead of adding
+	velocity.y -= gravity * delta
+	#print("touch the floor ? ", on_floor())  # Subtracting instead of adding
 
 	# Inverted jump mechanic.
-	#print(is_on_floor())
-	if Input.is_action_just_pressed("ui_accept"):
+	if on_floor() and Input.is_action_just_pressed("ui_accept"):
 		velocity.y -= JUMP_VELOCITY  # Negative jump power for inverted jump
 		set_animation("Jump_Start")
 
 	move_and_slide()
 	# Determine the correct animation for inverted gravity.
 	var animation_name = "Idle"
-	if direction.length() > 0:
-		animation_name = "Walking_A"
+	if on_floor():
+		if direction.length() > 0:
+			animation_name = "Walking_A"
 	else:
 		if velocity.y > 0:
 			animation_name = "Jump_Land"
@@ -85,3 +86,6 @@ func get_input_direction() -> Vector3:
 		right += transform.basis.x
 
 	return (forward + right).normalized()
+
+func on_floor() -> bool:
+	return abs(get_position_delta().y) >= 0.0 and abs(get_position_delta().y) <= 0.03
