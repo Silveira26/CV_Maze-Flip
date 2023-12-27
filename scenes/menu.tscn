@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxsp66otw1h6k"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_tw7ko"]
+[ext_resource type="Texture2D" uid="uid://bqr8pip016f15" path="res://assets/icon_no_background.png" id="2_ckoj4"]
+[ext_resource type="Theme" uid="uid://cl1atbmxx0p57" path="res://resources/buttons_theme.tres" id="2_ug7q3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d41md"]
+font_size = 34
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tw7ko")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.27451, 0.345098, 1)
+
+[node name="Buttons Container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113
+anchor_top = 0.29
+anchor_right = 0.311
+anchor_bottom = 0.718
+offset_left = -0.17601
+offset_top = 0.0799866
+offset_right = -0.272034
+offset_bottom = -0.264038
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons Container"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Play" type="Button" parent="Buttons Container/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ug7q3")
+text = "Play"
+
+[node name="Instructions" type="Button" parent="Buttons Container/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ug7q3")
+text = "Instructions"
+
+[node name="About" type="Button" parent="Buttons Container/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ug7q3")
+text = "About"
+
+[node name="Quit" type="Button" parent="Buttons Container/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ug7q3")
+text = "Quit"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.466
+anchor_top = 0.082
+anchor_right = 0.951
+anchor_bottom = 0.941
+offset_left = 0.167969
+offset_top = -0.136002
+offset_right = 0.447998
+offset_bottom = 0.231995
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_ckoj4")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title Text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102
+anchor_top = 0.833
+anchor_right = 0.31
+anchor_bottom = 0.906
+offset_left = 0.495995
+offset_top = 0.215942
+offset_right = -0.119995
+offset_bottom = -0.0880127
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Title Text"]
+layout_mode = 2
+text = "Version 4.1.0"
+label_settings = SubResource("LabelSettings_d41md")
+horizontal_alignment = 1
+language = "en"
+
+[connection signal="pressed" from="Buttons Container/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons Container/VBoxContainer/Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="Buttons Container/VBoxContainer/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Buttons Container/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

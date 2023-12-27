@@ -1,0 +1,181 @@
+[gd_scene load_steps=7 format=3 uid="uid://8j1a5my7xra0"]
+
+[ext_resource type="Script" path="res://scripts/instructions_menu.gd" id="1_t0fvl"]
+[ext_resource type="Theme" uid="uid://cl1atbmxx0p57" path="res://resources/buttons_theme.tres" id="2_txwjg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wblky"]
+font_size = 34
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3w7sn"]
+font_size = 24
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ihfdy"]
+font_size = 26
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5xtw8"]
+font_size = 18
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="InstructionsMenu" type="Control"]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+script = ExtResource("1_t0fvl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.27451, 0.345098, 1)
+
+[node name="Title Text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.031
+anchor_right = 0.604
+anchor_bottom = 0.103
+offset_left = -0.344025
+offset_top = -0.0880013
+offset_right = 0.191956
+offset_bottom = 0.255997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Title Text"]
+layout_mode = 2
+text = "About"
+label_settings = SubResource("LabelSettings_wblky")
+horizontal_alignment = 1
+language = "en"
+
+[node name="Body Text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.134
+anchor_right = 0.987
+anchor_bottom = 0.358
+offset_left = 92.808
+offset_top = 12.168
+offset_right = -93.024
+offset_bottom = -11.984
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Body Text"]
+layout_mode = 2
+text = "MazeFlip is an exciting video game that combines two mazes into one mind-bending experience.
+Your mission is to navigate through these interconnected mazes while 
+showcasing the visual computing concepts you've learned in your class.
+To help you on your journey, here are the key controls and functions:"
+label_settings = SubResource("LabelSettings_3w7sn")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "en"
+
+[node name="End Text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098
+anchor_top = 0.4
+anchor_right = 0.905
+anchor_bottom = 0.515
+offset_left = 0.103989
+offset_top = -0.200012
+offset_right = 3.44006
+offset_bottom = 0.279968
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="End Text"]
+layout_mode = 2
+text = "This game was made for the Visual Computing class in University of Aveiro
+Class of 23/24"
+label_settings = SubResource("LabelSettings_ihfdy")
+horizontal_alignment = 1
+language = "en"
+
+[node name="End Text2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102
+anchor_top = 0.534
+anchor_right = 0.905
+anchor_bottom = 0.77
+offset_left = 0.495987
+offset_top = -0.0320129
+offset_right = 8.44006
+offset_bottom = 0.039978
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="End Text2"]
+layout_mode = 2
+text = "- Game was created by -
+Vicente Barros 97787
+Filipe Silveira 97981
+Mariana Andrade 103823
+"
+label_settings = SubResource("LabelSettings_ihfdy")
+horizontal_alignment = 1
+language = "en"
+
+[node name="End Text3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.772
+anchor_right = 0.905
+anchor_bottom = 0.86
+offset_left = -0.44001
+offset_top = -0.256012
+offset_right = -0.559937
+offset_bottom = 17.72
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="End Text3"]
+layout_mode = 2
+text = "All used game assets are available at 
+kaylousberg.itch.io"
+label_settings = SubResource("LabelSettings_5xtw8")
+horizontal_alignment = 1
+language = "en"
+
+[node name="Button Container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.457
+anchor_top = 0.897
+anchor_right = 0.543
+anchor_bottom = 0.974
+offset_left = 0.536011
+offset_top = -0.255981
+offset_right = 1.46393
+offset_bottom = -0.152039
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Button Container"]
+layout_mode = 2
+theme = ExtResource("2_txwjg")
+text = "Back"
+
+[connection signal="pressed" from="Button Container/Back" to="." method="_on_back_pressed"]

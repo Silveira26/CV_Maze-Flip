@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://qcydxq8gclua"]
+
+[ext_resource type="Script" path="res://scripts/instructions_menu.gd" id="1_th72x"]
+[ext_resource type="Theme" uid="uid://cl1atbmxx0p57" path="res://resources/buttons_theme.tres" id="2_6lyqc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wblky"]
+font_size = 34
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qwr4"]
+font_size = 21
+font_color = Color(1, 0.588235, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="InstructionsMenu" type="Control"]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+script = ExtResource("1_th72x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.27451, 0.345098, 1)
+
+[node name="Title Text" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.031
+anchor_right = 0.604
+anchor_bottom = 0.103
+offset_left = -0.344025
+offset_top = -0.0880013
+offset_right = 0.191956
+offset_bottom = 0.255997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Title Text"]
+layout_mode = 2
+text = "Instructions"
+label_settings = SubResource("LabelSettings_wblky")
+horizontal_alignment = 1
+language = "en"
+
+[node name="Body Text2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.116
+anchor_right = 0.943
+anchor_bottom = 0.877
+offset_left = -0.512001
+offset_top = -0.167999
+offset_right = -0.33606
+offset_bottom = -0.296021
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Body Text2"]
+layout_mode = 2
+text = "Movement:
+Use the WASD keys to move your character through the maze.
+
+Camera Control:
+Control your perspective by moving the mouse.
+
+Character/Maze Switching:
+Press the 'C' key to switch between characters or mazes.
+
+Camera Switching:
+Press the 'V' key to switch between different camera angles.
+
+Projection Switching:
+Use the 'B' key to switch between 
+perspective and  orthogonal projection."
+label_settings = SubResource("LabelSettings_0qwr4")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "en"
+
+[node name="Button Container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.457
+anchor_top = 0.897
+anchor_right = 0.543
+anchor_bottom = 0.974
+offset_left = 0.536011
+offset_top = -0.255981
+offset_right = 1.46393
+offset_bottom = -0.152039
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Button Container"]
+layout_mode = 2
+theme = ExtResource("2_6lyqc")
+text = "Back"
+
+[connection signal="pressed" from="Button Container/Back" to="." method="_on_back_pressed"]
