@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://dgtimy8xdjkcr"]
+
+[ext_resource type="Shader" path="res://assets/shaders/stylized_sky.gdshader" id="1_nijip"]
+[ext_resource type="Texture2D" uid="uid://b5uq1kmasqyko" path="res://resources/gradient_texture_2d.tres" id="2_gj5bk"]
+[ext_resource type="Texture2D" uid="uid://c8r4qqerd32dt" path="res://resources/curve_texture.tres" id="3_raqjw"]
+[ext_resource type="Texture2D" uid="uid://ckmufbom8whug" path="res://resources/noise_texture_2d.tres" id="4_7tisp"]
+[ext_resource type="Texture2D" uid="uid://qvkq7gk11ii8" path="res://assets/shooting_star_sampler.png" id="5_uyia2"]
+
+[resource]
+shader = ExtResource("1_nijip")
+shader_parameter/clouds_samples = 32
+shader_parameter/shadow_sample = 4
+shader_parameter/clouds_density = 0.4
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_smoothness = 0.03
+shader_parameter/clouds_light_color = Color(1, 1, 1, 1)
+shader_parameter/clouds_shadow_intensity = 3.5
+shader_parameter/cloud_shape_sampler = ExtResource("4_7tisp")
+shader_parameter/cloud_noise_sampler = ExtResource("4_7tisp")
+shader_parameter/cloud_curves = ExtResource("3_raqjw")
+shader_parameter/high_clouds_density = 0.2
+shader_parameter/high_clouds_sampler = ExtResource("4_7tisp")
+shader_parameter/top_color = Color(0.34902, 0.588235, 1, 1)
+shader_parameter/bottom_color = Color(0, 0.329412, 0.968627, 1)
+shader_parameter/sun_scatter = Color(0.298039, 0.298039, 0.298039, 1)
+shader_parameter/astro_tint = Color(0.905882, 0.788235, 0.627451, 1)
+shader_parameter/astro_scale = 9.0
+shader_parameter/astro_intensity = 3.0
+shader_parameter/astro_sampler = ExtResource("2_gj5bk")
+shader_parameter/stars_intensity = 0.0
+shader_parameter/shooting_stars_intensity = 0.0
+shader_parameter/shooting_star_tint = null
+shader_parameter/shooting_star_sampler = ExtResource("5_uyia2")
