@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3asfsv250721"]
 
 [ext_resource type="MeshLibrary" uid="uid://cidrn3c1hd40l" path="res://resources/spacebit_assets_new.tres" id="1"]
-[ext_resource type="PackedScene" uid="uid://bj5sxgh0mqydw" path="res://scenes/Axe.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://h0b582u06yg0" path="res://scenes/Axe.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkot3rdyhl3mt" path="res://scenes/barbarian_v2.tscn" id="3_5i5r0"]
 
 [node name="MazeBottom" type="Node3D"]
