@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://3asfsv250721"]
+[gd_scene load_steps=8 format=3 uid="uid://3asfsv250721"]
 
 [ext_resource type="MeshLibrary" uid="uid://cidrn3c1hd40l" path="res://resources/spacebit_assets_new.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://h0b582u06yg0" path="res://scenes/Axe.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkot3rdyhl3mt" path="res://scenes/barbarian_v2.tscn" id="3_5i5r0"]
+[ext_resource type="PackedScene" uid="uid://ckguowaa8gvmm" path="res://scenes/BarrelWireFrame.tscn" id="4_arv40"]
+[ext_resource type="PackedScene" uid="uid://pwwbpp1bgmkt" path="res://scenes/DarnCube.tscn" id="5_2d3cn"]
+[ext_resource type="PackedScene" uid="uid://i13ovosn3u0d" path="res://scenes/RainbowPallet.tscn" id="6_g0i4t"]
+[ext_resource type="PackedScene" uid="uid://c073nvu3fi7bp" path="res://scenes/TablePixelated.tscn" id="7_phlyb"]
 
 [node name="MazeBottom" type="Node3D"]
 
@@ -31,3 +35,17 @@ transform = Transform3D(-0.596141, -0.80288, 0, 0.80288, -0.596141, 0, 0, 0, 1, 
 
 [node name="Player" parent="." instance=ExtResource("3_5i5r0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8389, 0.908774, -11.1255)
+
+[node name="Misc" type="Node3D" parent="."]
+
+[node name="BarrelWireFrame" parent="Misc" instance=ExtResource("4_arv40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.6743, 1.1879, -1.2817)
+
+[node name="Darn" parent="Misc" instance=ExtResource("5_2d3cn")]
+transform = Transform3D(-0.999939, 0, -0.0110303, 0, 1, 0, 0.0110303, 0, -0.999939, 27.2672, 0.52978, -2.78046)
+
+[node name="RainbowPallet" parent="Misc" instance=ExtResource("6_g0i4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0926, 0, -0.735441)
+
+[node name="TablePixelated" parent="Misc" instance=ExtResource("7_phlyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.1871, 0.511662, -2.30458)
