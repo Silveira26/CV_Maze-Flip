@@ -99,7 +99,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Title Text"]
 layout_mode = 2
-text = "Version 4.1.0"
+text = "Version 4.2.0"
 label_settings = SubResource("LabelSettings_d41md")
 horizontal_alignment = 1
 language = "en"
