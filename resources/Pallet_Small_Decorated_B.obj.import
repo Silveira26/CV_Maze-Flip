@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dl6f0ommj8102"
+path="res://.godot/imported/Pallet_Small_Decorated_B.obj-3d0693fb555be650635439c6ec75a341.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pallet_Small_Decorated_B.obj-3d0693fb555be650635439c6ec75a341.mesh"]
+
+source_file="res://resources/Pallet_Small_Decorated_B.obj"
+dest_files=["res://.godot/imported/Pallet_Small_Decorated_B.obj-3d0693fb555be650635439c6ec75a341.mesh", "res://.godot/imported/Pallet_Small_Decorated_B.obj-3d0693fb555be650635439c6ec75a341.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

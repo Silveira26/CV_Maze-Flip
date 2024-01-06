@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://pwwbpp1bgmkt"]
+
+[ext_resource type="Shader" path="res://assets/shaders/DarnGrid.gdshader" id="1_yvtdh"]
+[ext_resource type="ArrayMesh" uid="uid://ds3hdyhgwx1i" path="res://resources/Primitive_Cube.obj" id="2_6pf8j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y217b"]
+render_priority = 0
+shader = ExtResource("1_yvtdh")
+shader_parameter/subdivisions = 32.0
+shader_parameter/grid_width = 0.02
+shader_parameter/background_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/background_color_two = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/grid_color = Color(0.75, 0, 0.5, 1)
+shader_parameter/dashed_scale_x = 0.02
+shader_parameter/dashed_scale_y = 0.02
+shader_parameter/dashed_count_x = 1.0
+shader_parameter/dashed_count_y = 1.0
+shader_parameter/point_width = 0.021
+shader_parameter/point_color = Color(0, 0, 0, 1)
+shader_parameter/point_scale_x = 0.05
+shader_parameter/point_scale_y = 0.05
+shader_parameter/inside_width = 0.01
+shader_parameter/inside_subdivisions = 8.0
+shader_parameter/inside_color = Color(0.4, 0.4, 0.4, 1)
+shader_parameter/in_dashed_scale_x = 0.3
+shader_parameter/in_dashed_scale_y = 0.3
+shader_parameter/in_dashed_count_x = 10.0
+shader_parameter/in_dashed_count_y = 10.0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ccobu"]
+data = PackedVector3Array(1.9999, 3.9999, 1.9999, 1.9999, 3.9999, -2, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, 1.9999, 3.9999, -2, 1.9999, 0, -2, -2, 0, 1.9999, -2, 3.9999, 1.9999, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, -2, 3.9999, 1.9999, 1.9999, 3.9999, 1.9999, 1.9999, 0, -2, -2, 0, -2, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, -2, 0, -2, -2, 0, 1.9999, -2, 3.9999, -2, -2, 3.9999, 1.9999, -2, 0, -2, -2, 0, -2, -2, 3.9999, 1.9999, -2, 0, 1.9999, 1.9999, 3.9999, 1.9999, -2, 3.9999, 1.9999, 1.9999, 3.9999, -2, 1.9999, 3.9999, -2, -2, 3.9999, 1.9999, -2, 3.9999, -2, 1.9999, 3.9999, -2, -2, 3.9999, -2, 1.9999, 0, -2, 1.9999, 0, -2, -2, 3.9999, -2, -2, 0, -2)
+
+[node name="Darn" type="Node3D"]
+
+[node name="PrimitiveCube" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.177881, 0, 0, 0, 0.177881, 0, 0, 0, 0.124632, -1.51713, -0.013081, -1.67466)
+material_override = SubResource("ShaderMaterial_y217b")
+mesh = ExtResource("2_6pf8j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PrimitiveCube"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PrimitiveCube/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ccobu")
