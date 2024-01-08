@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ijeaholcj6on"]
 
-[ext_resource type="Material" path="res://assets/textures/dungeon.material" id="1"]
+[ext_resource type="Material" uid="uid://dol5sgiyn7u1k" path="res://assets/textures/dungeon.material" id="1"]
 [ext_resource type="Texture2D" uid="uid://wa51xi0s3x2c" path="res://assets/textures/smoke.png" id="2"]
 [ext_resource type="ArrayMesh" uid="uid://vke4ed74o3pf" path="res://resources/barrel_large_decorated.obj" id="3"]
 

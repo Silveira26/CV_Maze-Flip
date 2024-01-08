@@ -1,7 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://pwwbpp1bgmkt"]
 
 [ext_resource type="Shader" path="res://assets/shaders/DarnGrid.gdshader" id="1_yvtdh"]
-[ext_resource type="ArrayMesh" uid="uid://ds3hdyhgwx1i" path="res://resources/Primitive_Cube.obj" id="2_6pf8j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y217b"]
 render_priority = 0
@@ -27,17 +26,18 @@ shader_parameter/in_dashed_scale_y = 0.3
 shader_parameter/in_dashed_count_x = 10.0
 shader_parameter/in_dashed_count_y = 10.0
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ccobu"]
-data = PackedVector3Array(1.9999, 3.9999, 1.9999, 1.9999, 3.9999, -2, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, 1.9999, 3.9999, -2, 1.9999, 0, -2, -2, 0, 1.9999, -2, 3.9999, 1.9999, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, -2, 3.9999, 1.9999, 1.9999, 3.9999, 1.9999, 1.9999, 0, -2, -2, 0, -2, 1.9999, 0, 1.9999, 1.9999, 0, 1.9999, -2, 0, -2, -2, 0, 1.9999, -2, 3.9999, -2, -2, 3.9999, 1.9999, -2, 0, -2, -2, 0, -2, -2, 3.9999, 1.9999, -2, 0, 1.9999, 1.9999, 3.9999, 1.9999, -2, 3.9999, 1.9999, 1.9999, 3.9999, -2, 1.9999, 3.9999, -2, -2, 3.9999, 1.9999, -2, 3.9999, -2, 1.9999, 3.9999, -2, -2, 3.9999, -2, 1.9999, 0, -2, 1.9999, 0, -2, -2, 3.9999, -2, -2, 0, -2)
+[sub_resource type="SphereMesh" id="SphereMesh_7gaob"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_w7ueg"]
 
 [node name="Darn" type="Node3D"]
 
 [node name="PrimitiveCube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.177881, 0, 0, 0, 0.177881, 0, 0, 0, 0.124632, -1.51713, -0.013081, -1.67466)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51713, -0.013081, -1.67466)
 material_override = SubResource("ShaderMaterial_y217b")
-mesh = ExtResource("2_6pf8j")
+mesh = SubResource("SphereMesh_7gaob")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="PrimitiveCube"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PrimitiveCube/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ccobu")
+shape = SubResource("SphereShape3D_w7ueg")

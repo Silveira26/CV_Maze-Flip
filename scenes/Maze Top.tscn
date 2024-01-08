@@ -128,4 +128,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.37037, 0, 1.69042)
 [node name="Axes" type="Node3D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("4_r1sjw")]
-transform = Transform3D(-0.0185693, 0, -0.999828, 0, 1, 0, 0.999828, 0, -0.0185693, -36.2882, 0, 27.8474)
+transform = Transform3D(-0.0148554, 0, -0.799862, 0, 0.8, 0, 0.799862, 0, -0.0148554, -36.2882, 0, 27.8474)
